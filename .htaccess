@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+
+
+Redirect 301 /vkhodnye-dveri.html https://dveri-city.kz/catalog/vhodnye-dveri
+Redirect 301 /mezhkomnatnye-dveri.html https://dveri-city.kz/catalog/mezhkomnatnye-dveri
+Redirect 301 /massiv-drevesiny.html https://dveri-city.kz/news/derevyannye-dveri
+Redirect 301 /metallicheskie-dveri.html https://dveri-city.kz/news/metallicheskie-dveri

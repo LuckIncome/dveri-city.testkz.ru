@@ -1,0 +1,158 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+RewriteEngine On
+
+
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+RewriteRule (.+)\.(jpe?g|png|PNG|JPG|jpg)$ $1.webp [T=image/webp,E=accept:1]
+Header append Vary Accept env=REDIRECT_accept
+AddType image/webp .webp
+
+    RewriteEngine On
+
+    # Handle Authorization MemberHeader
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Remove public URL from the path
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L,QSA]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+RewriteCond %{THE_REQUEST} // 
+# Проверяем, повторяется ли слеш (//) более двух раз. 
+RewriteRule .* /$0 [R=301,L] 
+# Исключаем все лишние слеши.
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+RewriteCond %{HTTP:X-Forwarded-Protocol} !=https
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L] 
+
+#убрать знак вопроса
+RewriteCond %{THE_REQUEST} ^[^\s]+\s+[^?]*?\?
+RewriteCond %{QUERY_STRING} =""
+# Для любых версий Apache:
+RewriteRule .? %{REQUEST_URI}? [R=301,L]
+
+# Enable Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+</IfModule>
+<IfModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+# Leverage Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access 1 year"
+  ExpiresByType image/jpeg "access 1 year"
+  ExpiresByType image/webp "access 1 year"
+  ExpiresByType image/gif "access 1 year"
+  ExpiresByType image/png "access 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType text/html "access 1 month"
+  ExpiresByType application/pdf "access 6 month"
+  ExpiresByType text/x-javascript "access 1 month"
+  ExpiresByType application/x-shockwave-flash "access 1 month"
+  ExpiresByType image/x-icon "access 1 year"
+  ExpiresDefault "access 6 month"
+</IfModule>
+<IfModule mod_headers.c>
+  <filesmatch "\.(ico|flv|jpg|jpeg|png|gif|css|swf|webp)$">
+  Header set Cache-Control "max-age=16070400, public"
+  </filesmatch>
+  <filesmatch "\.(html|htm)$">
+  Header set Cache-Control "max-age=7200, private, must-revalidate"
+  </filesmatch>
+  <filesmatch "\.(pdf)$">
+  Header set Cache-Control "max-age=86400, public"
+  </filesmatch>
+  <filesmatch "\.(js)$">
+  Header set Cache-Control "max-age=2678400, private"
+  </filesmatch>
+  <filesmatch "\.(ttf|otf|eot|svg|woff)$" >
+      SetOutputFilter DEFLATE
+  </filesmatch>
+</IfModule>
+
+RewriteCond %{HTTP_USER_AGENT} Riddler [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} aiHitBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Alexibot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} BacklinkCrawler [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} CCResearchBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} CCBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} MegaIndex\.ru/2\.0 [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} MegaIndex.ru [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} megaindex.com [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ia_archiver [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Baiduspider [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} archive\.org_bot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} BLEXBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} LinkpadBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} FlipboardProxy [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Detectify [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} trovitBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} spbot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Serpstatbot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} exabot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} SemrushBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} SemrushBot-SA [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} SurveyBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} MJ12bot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} SearchBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} semilarWeb [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} AhrefsBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Semrush [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Ahrefs [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} SemilarWebBot [NC,OR]
+
+
+RewriteCond %{QUERY_STRING} ^option=com_content&view=article&id=ID_28$ [NC]
+RewriteRule ^/index\.php$ /catalog/tamburnye-dveri [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^option=com_content&view=article&id=ID_29$ [NC]
+RewriteRule ^/index.php$ /news/razdvizhnye-dveri [R=301,L]

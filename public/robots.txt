@@ -1,0 +1,11 @@
+User-agent: *
+Dissallow: /cart
+Dissallow: /checkout
+Dissallow: /sales
+Dissallow: /news
+Dissallow: /page/partners
+Dissallow:/compare
+Dissallow: /news?page=1
+Dissallow: /news?page=2
+
+Sitemap: https://dveri-city.kz/sitemap.xml

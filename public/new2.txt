@@ -1,0 +1,45 @@
+select * from information_schema.tables where table_schema = ? and table_name = ? and table_type = 'BASE TABLE'
+buldoorskz_dvericity, data_types
+2
+select `policy_name`, `model_name` from `data_types`
+
+0
+select * from `data_types`
+
+0
+select exists(select * from `categories` where `name` = ?) as `exists`
+Межкомнатные двери
+1
+select * from `categories` where `name` = ? limit 1
+Межкомнатные двери
+1
+select * from `products` where (`name` = ? and `brand` = ? and `category_id` = ? and `regular_price` = ? and `sale_price` = ? and `thumb` = ? and `images` = ? and `excerpt` = ? and `slug` = ? and `stock_count` = ? and `meta_description` = ? and `meta_keywords` = ? and `seo_title` = ? and `sku` = ? and `variation_id` = ? and `featured` = ? and `is_new` = ? and `characteristics` = ?) limit 1
+Модель Виолетта RAL, ЛайнДор, 1, 96000, 100, /products/January2020/gnNKCHSSqAEE9TkM.png, ["\/products\/January2020\/gnNKCHSSqAEE9TkM.png","\/products\/January2020\/gnNKCHSSqAEE9TkM.png","\/products\/January2020\/gnNKCHSSqAEE9TkM.png","\/products\/January2020\/gnNKCHSSqAEE9TkM.png"], Дверное полотно_массив сосны_филенка МДФ_Материал_эмаль_Тип двери_остекленная и глухая_В комплекте_"П" образный коробка и наличник на одну сторону, model-violetta-ral, 4, Виолетта Ral, Виолетта Ral, Виолетта Ral, 8913748, a:1:{i:0;s:0:"";}, 1, , a:2:{i:0;a:2:{s:4:"name";s:188:"Дверное полотно облицовано натуральным шпоном и покрыты двухкомпонентным итальянским лаком ICA_Каркас";s:5:"value";a:2:{i:0;s:188:"Дверное полотно облицовано натуральным шпоном и покрыты двухкомпонентным итальянским лаком ICA_Каркас";i:1;s:10:"сосна";}}i:1;a:2:{s:4:"name";s:188:"Дверное полотно облицовано натуральным шпоном и покрыты двухкомпонентным итальянским лаком ICA_Каркас";s:5:"value";a:2:{i:0;s:188:"Дверное полотно облицовано натуральным шпоном и покрыты двухкомпонентным итальянским лаком ICA_Каркас";i:1;s:10:"сосна";}}}
+18
+insert into `products` (`name`, `brand`, `category_id`, `regular_price`, `sale_price`, `thumb`, `images`, `excerpt`, `slug`, `stock_count`, `meta_description`, `meta_keywords`, `seo_title`, `sku`, `variation_id`, `featured`, `is_new`, `characteristics`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Модель Виолетта RAL, ЛайнДор, 1, 96000, 100, /products/January2020/gnNKCHSSqAEE9TkM.png, ["\/products\/January2020\/gnNKCHSSqAEE9TkM.png","\/products\/January2020\/gnNKCHSSqAEE9TkM.png","\/products\/January2020\/gnNKCHSSqAEE9TkM.png","\/products\/January2020\/gnNKCHSSqAEE9TkM.png"], Дверное полотно_массив сосны_филенка МДФ_Материал_эмаль_Тип двери_остекленная и глухая_В комплекте_"П" образный коробка и наличник на одну сторону, model-violetta-ral, 4, Виолетта Ral, Виолетта Ral, Виолетта Ral, 8913748, a:1:{i:0;s:0:"";}, 1, , a:2:{i:0;a:2:{s:4:"name";s:188:"Дверное полотно облицовано натуральным шпоном и покрыты двухкомпонентным итальянским лаком ICA_Каркас";s:5:"value";a:2:{i:0;s:188:"Дверное полотно облицовано натуральным шпоном и покрыты двухкомпонентным итальянским лаком ICA_Каркас";i:1;s:10:"сосна";}}i:1;a:2:{s:4:"name";s:188:"Дверное полотно облицовано натуральным шпоном и покрыты двухкомпонентным итальянским лаком ICA_Каркас";s:5:"value";a:2:{i:0;s:188:"Дверное полотно облицовано натуральным шпоном и покрыты двухкомпонентным итальянским лаком ICA_Каркас";i:1;s:10:"сосна";}}}, 2020-03-06 13:08:04, 2020-03-06 13:08:04
+20
+select * from `translations` where `table_name` = ? and `locale` in (?, ?) and `translations`.`foreign_key` in (226)
+products, ru, kz
+3
+select * from `translations` where `table_name` = ? and `column_name` = ? and `foreign_key` = ? and `locale` = ? limit 1
+products, name, 226, kz
+4
+insert into `translations` (`table_name`, `column_name`, `foreign_key`, `value`, `locale`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?, ?)
+products, name, 226, дло, kz, 2020-03-06 13:08:04, 2020-03-06 13:08:04
+7
+select * from `translations` where `table_name` = ? and `column_name` = ? and `foreign_key` = ? and `locale` = ? limit 1
+products, excerpt, 226, kz
+4
+insert into `translations` (`table_name`, `column_name`, `foreign_key`, `value`, `locale`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?, ?)
+products, excerpt, 226, , kz, 2020-03-06 13:08:04, 2020-03-06 13:08:04
+7
+select * from `users` where `id` = ? limit 1
+1
+1
+SELECT 1
+
+0
+SELECT 1
+
+0

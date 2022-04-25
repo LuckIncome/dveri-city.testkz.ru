@@ -1,0 +1,3 @@
+<div id="<?php echo e($row->field); ?>" data-theme="<?php echo e(@$options->theme); ?>" data-language="<?php echo e(@$options->language); ?>" class="ace_editor min_height_200" name="<?php echo e($row->field); ?>"><?php echo e(old($row->field, $dataTypeContent->{$row->field} ?? $options->default ?? '')); ?></div>
+<textarea name="<?php echo e($row->field); ?>" id="<?php echo e($row->field); ?>_textarea" class="hidden"><?php echo e(old($row->field, $dataTypeContent->{$row->field} ?? $options->default ?? '')); ?></textarea>
+<?php /**PATH /home/users/b/buldoorskz/domains/dveri-city.kz/vendor/tcg/voyager/resources/views/formfields/code_editor.blade.php ENDPATH**/ ?>

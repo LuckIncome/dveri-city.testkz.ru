@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/icons/favicon.ico">
+
+    <title>Dveri City</title>
+
+    <link rel="canonical" href="/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/mobile.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="dvericity">
+
+<header>
+    <div class="menu">
+        <div class="container main">
+            <div class="align-content-between row">
+                <div class="col-6">
+                    <nav class="navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><span>О компании</span></a></li>
+                                <li><a href="#"><span>Каталог</span></a></li>
+                                <li><a href="#"><span>Аксессуары</span></a></li>
+                                <li><a href="#"><span>Акции</span></a></li>
+                                <li><a href="#"><span>Новости</span></a></li>
+                                <li><a href="#"><span>Партнеры</span></a></li>
+                                <li><a href="#"><span>Контакты</span></a></li>
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-6 row">
+                    <div class="phones-header col-7">
+                        <a rel="nofollow" href="tel:+77273780887"><span>+7 (727) </span>378-08-87</a>
+                        <a rel="nofollow" href="tel:+77788888848"><span>+7 (778) </span>888-88-48</a>
+                    </div>
+                    <div class="callback-header col-5">
+                        <a href="#" class="callback-btn">Заказать звонок</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-block">
+        <div class="container">
+            <div class="d-flex">
+                <a class="hamb"></a>
+                <div class="logo align-content-start">
+                    <a href="#"><img src="images/logo.jpg" alt="Входные и межкомнатные двери по оптовым ценам в Алматы"></a>
+                    <p class="logo-text">Входные и межкомнатные двери по оптовым ценам в Алматы</p>
+                </div>
+                <div class="search">
+                    <form action="">
+                        <input type="text" name="search" class="searchBox">
+                        <button type="submit" class="submit-btn">Найти</button>
+                    </form>
+                </div>
+                <div class="cls-block">
+                    <div class="social">
+                        <a href="#" target="_blank"><img src="images/instagram.svg" alt="Instagram Dveri City"></a>
+                    </div>
+                    <div class="langs">
+                        <ul>
+                            <li>Рус</li>
+                            <li><a href="#">Каз</a></li>
+                        </ul>
+                    </div>
+                    <div class="cart-btns">
+                        <div class="compare-header">
+                            <a href="#" class="compare">
+                                <span>7</span>
+                            </a>
+                        </div>
+                        <div class="cart-header">
+                            <a class="cart">
+                                <span>7</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="content">
+                                    <div class="item">
+                                        <div class="image">
+                                            <img src="images/45-р1%20dub-1060x5001.png" alt="item">
+                                        </div>
+                                        <div class="info">
+                                            <div class="name">
+                                                <strong>Бульдорс 45 P-1 Дуб крем</strong>
+                                                <p>Одна из самых популярных дверей у наших клиентов</p>
+                                            </div>
+                                            <div class="price">
+                                                <span>Цена:</span>
+                                                <p>33 000<span class="valute">₸</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="remove"><a href="#"></a></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image">
+                                            <img src="images/dver2.png" alt="item">
+                                        </div>
+                                        <div class="info">
+                                            <div class="name">
+                                                <strong>Бульдорс 45 P-1 Дуб крем</strong>
+                                                <p>Одна из самых популярных дверей у наших клиентов</p>
+                                            </div>
+                                            <div class="price">
+                                                <span>Цена:</span>
+                                                <p>33 000<span class="valute">₸</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="remove"><a href="#"></a></div>
+                                    </div>
+                                </div>
+                                <div class="checkout">
+                                    <div class="total">
+                                        <span>Итого:</span>
+                                        <p>96 000<span class="valute">₸</span></p>
+                                    </div>
+                                    <div class="button">
+                                        <a href="">Перейти в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="catalog-page def-page" ng-controller="CatalogController as cc">
+        <div class="pre-header">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li class="arrow"><span class="fa fa-angle-right"></span></li>
+                        <li class="current"><span>Каталог</span></li>
+                    </ul>
+                </div>
+                <h1>Каталог товаров</h1>
+            </div>
+        </div>
+        <div class="container" ng-init="cc.init()">
+            <div class="row">
+                <div class="sidebar col-3">
+                    <div class="filter">
+                        <p class="title main">Фильтр</p>
+                        <div class="category-select">
+                            <select name="category">
+                                <option value="1">Межкомнатные двери</option>
+                                <option value="2">Входные двери</option>
+                                <option value="3">Тамбурные двери</option>
+                                <option value="4">Входные двери</option>
+                            </select>
+                        </div>
+                        <div class="type price-range">
+                            <p class="title">Цена (тг)</p>
+                            <span class="collapseBtn" data-toggle="collapse" href="#collapsePriceRange" role="button"
+                                  aria-expanded="true" aria-controls="collapsePriceRange">
+                                <i class="fa fa-chevron-down"></i>
+                            </span>
+                            <div class="collapse show" id="collapsePriceRange">
+                                <div class="inputs">
+                                    <div class="price-min">
+                                        <input type="text" ng-model="cc.filter.price_min"/>
+                                        <span>тг</span>
+                                    </div>
+                                    <span>—</span>
+                                    <div class="price-max">
+                                        <input type="text" ng-model="cc.filter.price_max"/>
+                                        <span>тг</span>
+                                    </div>
+                                </div>
+                                <rzslider rz-slider-model="cc.filter.price_min" rz-slider-high="cc.filter.price_max" rz-slider-options="cc.filter.options"></rzslider>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="row">
+                    <div class="filter">
+                        <div class="type color">
+                            <p class="title">Цвет товара</p>
+                            <span class="collapseBtn" data-toggle="collapse" href="#collapseColor" role="button"
+                                  aria-expanded="true" aria-controls="collapseColor">
+                                <i class="fa fa-chevron-down"></i>
+                            </span>
+                            <div class="collapse show" id="collapseColor">
+                                <div class="checkboxes">
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customColor1"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customColor1">Белый</label>
+                                        <span class="count">19</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customColor2"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customColor2">Венге</label>
+                                        <span class="count">120</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customColor3"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customColor3">Коричневый</label>
+                                        <span class="count">224</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customColor4"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customColor4">Черный</label>
+                                        <span class="count">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="row">
+                    <div class="filter">
+                        <div class="type height">
+                            <p class="title">Высота</p>
+                            <span class="collapseBtn" data-toggle="collapse" href="#collapseHeight" role="button"
+                                  aria-expanded="true" aria-controls="collapseHeight">
+                                <i class="fa fa-chevron-down"></i>
+                            </span>
+                            <div class="collapse show" id="collapseHeight">
+                                <div class="checkboxes">
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customHeight1"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customHeight1">2050 мм</label>
+                                        <span class="count">19</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customHeight2"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customHeight2">2000 мм</label>
+                                        <span class="count">120</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="row">
+                    <div class="filter">
+                        <div class="type color">
+                            <p class="title">Ширина</p>
+                            <span class="collapseBtn" data-toggle="collapse" href="#collapseWidth" role="button"
+                                  aria-expanded="true" aria-controls="collapseWidth">
+                                <i class="fa fa-chevron-down"></i>
+                            </span>
+                            <div class="collapse show" id="collapseWidth">
+                                <div class="checkboxes">
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customWidth1"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customWidth1">60 мм</label>
+                                        <span class="count">19</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customWidth2"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customWidth2">80 мм</label>
+                                        <span class="count">120</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customWidth3"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customWidth3">85 мм</label>
+                                        <span class="count">224</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customWidth4"
+                                               name="example1">
+                                        <label class="custom-control-label" for="customWidth4">90 мм</label>
+                                        <span class="count">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="submit-filter">Ок</a>
+                </div>
+                <div class="content col-9">
+                    <div class="sorting">
+                        <div class="sort">
+                            <p>Сортировка</p>
+                            <select>
+                                <option value="1">По умолчанию</option>
+                                <option value="1">По дате</option>
+                                <option value="1">По популярности</option>
+                                <option value="2">По возрастанию цены</option>
+                                <option value="2">По убыванию цены</option>
+                            </select>
+                        </div>
+                        <div class="limit">
+                            <p>Товаров на странице</p>
+                            <ul>
+                                <li class="active"><a href="#">12</a></li>
+                                <li><a href="#">24</a></li>
+                                <li><a href="#">48</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter-sort-mob">
+                        <select class="sort-type">
+                            <option value="1">По умолчанию</option>
+                            <option value="1">По дате</option>
+                            <option value="1">По популярности</option>
+                            <option value="2">По возрастанию цены</option>
+                            <option value="2">По убыванию цены</option>
+                        </select>
+                        <a class="filter-btn" ng-click="cc.refreshSlider()">Фильтр</a>
+                    </div>
+                    <div class="products">
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <span class="flash new">Новинка</span>
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <span class="flash sale">Акция</span>
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="item">
+                                <div class="image" style="background: url(images/image1.png) center no-repeat;">
+                                    <a href="#">
+                                        <img src="images/tovar.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <a href="#" class="name">Бульдорс Laser 24</a>
+                                    <hr>
+                                    <span class="priceLabel">Цена:</span>
+                                    <span class="price">42 000 <span class="valute">₸</span></span>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="add-to-cart">Купить</a>
+                                    <a href="#" class="add-to-compare"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="block">
+        <div class="left-block">
+            <div class="container-block">
+                <div class="logo">
+                    <a href="#"><img src="images/logo-foot.png" alt="Dveri City"></a>
+                    <p class="slogan">Входные и межкомнатные двери<br>по оптовым ценам в Алматы</p>
+                </div>
+                <div class="copyright-block">
+                    <div class="epays">
+                        <img src="images/visa.svg" alt="Visa Payment">
+                        <img src="images/epay.svg" alt="Epay Payment">
+                        <img src="images/mastercard.svg" alt="MasterCard Payment">
+                    </div>
+                    <div class="copyright-text">
+                        <p>© «DveriCity» 2019</p>
+                        <p class="developers">Разработано компанией <a href="#">«IMarketing»</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-block">
+            <div class="container-block">
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="contacts-block">
+                    <div class="contact">
+                        <a href="mailto:info@dveri-city.kz">info@dveri-city.kz</a>
+                    </div>
+                    <div class="contact phone">
+                        <a href="tel:+7(727)378-08-87">+7 (727) <span>378-08-87</span></a>
+                        <p>Звоните! Мы будем рады вам помочь!</p>
+                    </div>
+                    <div class="contact phone">
+                        <a href="tel:+7(727)378-08-87">+7 (727) <span>378-08-87</span></a>
+                        <p>Без выходных с 10:00 до 20:00</p>
+                    </div>
+                    <div class="contact social">
+                        <a href="#"><img src="images/inst2.svg" alt="Instagram Dveri City"></a>
+                    </div>
+                </div>
+                <div class="developers-mob">
+                    <p>© «DveriCity» 2019</p>
+                    <p>Разработано компанией <a href="#">«IMarketing»</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="popup popup-thank-you">
+    <div class="popup-wrapper">
+        <div class="popup-order-call-img">
+            <div class="img">
+                <img src="images/callback.jpg" alt="Заказать обратный звонок">
+            </div>
+        </div>
+        <div class="container">
+            <div class="popup-order-call-right">
+                <div class="popup-thank-you-heading">
+                    Спасибо за заявку!
+                </div>
+                <div class="popup-thank-you-sub-heading">
+                    Вас автоматически перенесет на главную страницу через 3 секунды
+                </div>
+                <a class="popup-thank-you-home-btn" href="#">На главную</a>
+            </div>
+        </div>
+        <div class="close-popup">
+            <svg width="25" height="18" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L16.5 16.5" stroke="#989898"/>
+                <path d="M16.5 1L1 16.5" stroke="#989898"/>
+            </svg>
+
+        </div>
+    </div>
+</div>
+<div class="popup popup-order-call">
+    <div class="popup-wrapper">
+        <div class="popup-order-call-img">
+            <div class="img">
+                <img src="images/callback.jpg" alt="Заказать обратный звонок">
+            </div>
+        </div>
+        <div class="container">
+            <div class="popup-order-call-right">
+                <div class="popup-order-call-heading">
+                    <span>Закажите звонок</span> и мы ответим в кратчайшие сроки
+                </div>
+                <div class="popup-order-call-form">
+                    <form>
+                        <label>
+                            <span>Введите ваше имя *</span>
+                            <input type="text" placeholder="Иван Иванович" required>
+                        </label>
+                        <label>
+                            <span>Введите ваш телефон *</span>
+                            <input type="tel" placeholder="+7 ( ___ ) ___ - __ - __" required>
+                        </label>
+                        <span>Услуга которая вас интересует</span>
+                        <select class="modal-select" name="serviceType">
+                            <option value="0">Аренда авто</option>
+                            <option value="1">Аренда авто с водителем</option>
+                            <option value="2">Услуги переводчика</option>
+                            <option value="3">Услуги гида</option>
+                            <option value="4">Услуги телохранителя</option>
+                            <option value="4">Туры по Казахстану</option>
+                        </select>
+                        <input type="submit" class="btn-orange" value="Отправить заявку">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="close-popup">
+            <svg width="25" height="18" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L16.5 16.5" stroke="#989898"/>
+                <path d="M16.5 1L1 16.5" stroke="#989898"/>
+            </svg>
+        </div>
+    </div>
+</div>
+<div id="modalFilter" class="modal" ng-controller="CatalogController as cc">
+    <!-- Modal content -->
+    <div class="modal-content popup-rights">
+        <span class="close close-filter"><svg width="25" height="18" viewBox="0 0 17 16" fill="none"
+                                              xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L16.5 16.5" stroke="#989898"/>
+                <path d="M16.5 1L1 16.5" stroke="#989898"/>
+            </svg></span>
+        <div class="popup-filter-full">
+            <div class="popup-content">
+                <div class="block">
+                    <div class="filter">
+                        <p class="title main">Фильтр</p>
+                        <div class="category-select">
+                            <select name="category">
+                                <option value="1">Межкомнатные двери</option>
+                                <option value="2">Входные двери</option>
+                                <option value="3">Тамбурные двери</option>
+                                <option value="4">Входные двери</option>
+                            </select>
+                        </div>
+                        <div class="type price-range">
+                            <p class="title">Цена (тг)</p>
+                            <span class="collapseBtn" data-toggle="collapse" href="#modalCollapsePriceRange"
+                                  role="button"
+                                  aria-expanded="true" aria-controls="modalCollapsePriceRange">
+                                <i class="fa fa-chevron-down"></i>
+                            </span>
+                            <div class="collapse show" id="modalCollapsePriceRange">
+                                <div class="inputs">
+                                    <div class="price-min">
+                                        <input type="text" ng-model="cc.filter.price_min"/>
+                                        <span>тг</span>
+                                    </div>
+                                    <span>—</span>
+                                    <div class="price-max">
+                                        <input type="text" ng-model="cc.filter.price_max"/>
+                                        <span>тг</span>
+                                    </div>
+                                </div>
+                                <rzslider rz-slider-model="cc.filter.price_min" rz-slider-high="cc.filter.price_max" rz-slider-options="cc.filter.options"></rzslider>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="filter">
+                        <div class="type color">
+                            <p class="title">Цвет товара</p>
+                            <span class="collapseBtn" data-toggle="collapse" href="#modalCollapseColor" role="button"
+                                  aria-expanded="true" aria-controls="modalCollapseColor">
+                                <i class="fa fa-chevron-down"></i>
+                            </span>
+                            <div class="collapse show" id="modalCollapseColor">
+                                <div class="checkboxes">
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomColor1"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomColor1">Белый</label>
+                                        <span class="count">19</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomColor2"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomColor2">Венге</label>
+                                        <span class="count">120</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomColor3"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomColor3">Коричневый</label>
+                                        <span class="count">224</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomColor4"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomColor4">Черный</label>
+                                        <span class="count">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="filter">
+                        <div class="type height">
+                            <p class="title">Высота</p>
+                            <span class="collapseBtn" data-toggle="collapse" href="#modalCollapseHeight" role="button"
+                                  aria-expanded="true" aria-controls="modalCollapseHeight">
+                                <i class="fa fa-chevron-down"></i>
+                            </span>
+                            <div class="collapse show" id="modalCollapseHeight">
+                                <div class="checkboxes">
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomHeight1"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomHeight1">2050 мм</label>
+                                        <span class="count">19</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomHeight2"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomHeight2">2000 мм</label>
+                                        <span class="count">120</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="filter">
+                        <div class="type color">
+                            <p class="title">Ширина</p>
+                            <span class="collapseBtn" data-toggle="collapse" href="#modalCollapseWidth" role="button"
+                                  aria-expanded="true" aria-controls="modalCollapseWidth">
+                                <i class="fa fa-chevron-down"></i>
+                            </span>
+                            <div class="collapse show" id="modalCollapseWidth">
+                                <div class="checkboxes">
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomWidth1"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomWidth1">60 мм</label>
+                                        <span class="count">19</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomWidth2"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomWidth2">80 мм</label>
+                                        <span class="count">120</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomWidth3"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomWidth3">85 мм</label>
+                                        <span class="count">224</span>
+                                    </div>
+                                    <div class="box custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="modalCustomWidth4"
+                                               name="example1">
+                                        <label class="custom-control-label" for="modalCustomWidth4">90 мм</label>
+                                        <span class="count">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="submit-filter">Ок</a>
+        </div>
+    </div>
+
+</div>
+<div id="modalTerms" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content popup-rights">
+        <span class="close close-terms"><svg width="25" height="18" viewBox="0 0 17 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L16.5 16.5" stroke="#989898"/>
+                <path d="M16.5 1L1 16.5" stroke="#989898"/>
+            </svg></span>
+        <div class="popup-rights-full">
+            <div class="popup-rights-heading">
+                Пользовательское соглашение
+            </div>
+            <div class="popup-rights-content">
+                <p>Самостоятельно определять марки транспортных средств класса для выполнения заказов.<br> В случае
+                    заказа
+                    транспортных средств других классов определяют марки транспортных средств совместно.</p>
+                <p>
+                    Производить перерасчёт стоимости предоставленных услуг в связи с изменением маршрута поездки при
+                    соблюдении
+                    одного из следующих условий:</p>
+                <p>— При заказе транспортного средства в аренду.<br>
+                    — При отсутствии фиксированного маршрута исполнения заказа.<br>
+                    — После согласования изменений маршрута поездки с Заказчиком.
+                </p>
+                <p>
+                    Изменения маршрута поездки фиксируются водителем в маршрутном листе по окончании
+                    поездки.<br>Если изменение программы поездок не было согласовано с Заказчиком, либо не было
+                    внесено в
+                    маршрутный лист, Заказчик имеет право не оплачивать оказанные услуги.<br>Исполнитель
+                    обязуется:<br>
+                    Выполнять услуги трансфера в соответствии с пунктом <br>Выполнять требования к транспортным
+                    средствам и
+                    водителям, указанные в Главе 4 настоящего Договора.<br> Соблюдать процедуры работы с заказами и
+                    запросами, указанные в Главах 3 настоящего Договора.<br> Своевременно уведомлять Заказчика обо
+                    всех
+                    непредвиденных обстоятельствах, связанных с исполнением настоящего договора, в том числе
+                    нарушении
+                    требований по обслуживанию клиентов.<br> Осуществлять замену вышедшего из строя транспортного
+                    средства в
+                    течение 1 часа в черте города и в течение 3 часов за его пределами, а также сообщить о проблеме
+                    Заказчику.<br> В течение 8 часов рассматривать и предоставлять ответ по всем претензионным
+                    обращениям
+                    Заказчика, связанным с качеством оказываемых услуг.<br> Исполнитель предоставляет бесплатное
+                    ожидания
+                    для клиента после посадки самолета в аэропорту в зоне приема багажа в течении не менее одного
+                    часа.<br>
+                    Исполнителем отслеживаются рейсы, которым пользуется клиенты.<br> Если рейс задерживается,
+                    трансфер
+                    должен был организован без дополнительной оплаты Заказчиком.<br> Исполнитель попвещает Заказчика
+                    о
+                    задержке рейса. <br>В случае отсутствия полной информации о трансфере в заявке предоставляемой
+                    Заказчиком, Исполнитель обязуется заблаговременно сообщить об этом Заказчику и запросить
+                    недостающую
+                    информацию. В случае неоказания трансферных услуг вследствие отсутствия полной информации в
+                    заявке и
+                    если Заказчик не был заблаговременно информирован об этом, Заказчик имеет право не оплачивать
+                    данный
+                    трансфер.</p>
+                <p>Заказчик обязуется:<br> Указывать при заказе услуги трансфера полные сведения, а именно город
+                    исполнения услуг, дату и время подачи транспортных средств, пункты отправления и назначения, тип
+                    услуг (аренда и/или трансфер), класс транспортного средства, текст таблички, ФИО клиента и номер
+                    телефона, номер авиарейса, номер поезда и вагона.<br>Использовать транспортное средство по
+                    назначению в
+                    соответствии с Заказом и в рамках лимита выделенного времени.<br>Не требовать от водителя
+                    совершения
+                    действий, противоречащих правилам дорожного движения и законодательству. <br>Соблюдать
+                    целостность
+                    транспортного средства, а так же порядок и чистоту в транспортном средстве, не допускать порчу
+                    имущества Исполнителя на протяжении всего времени выполнения заказа.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<link href="css/slick.css" rel="stylesheet">
+<link href="css/nice-select.css" rel="stylesheet">
+<link href="css/angularjs-slider.min.css" rel="stylesheet">
+<link href="css/lightslider.min.css" rel="stylesheet">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular/angularjs-slider.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/angular/app.module.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/lightslider.min.js"></script>
+
+<script src="js/script.js"></script>
+<script src="js/angular/controllers/catalog.controller.js"></script>
+<script src="js/angular/controllers/product.controller.js"></script>
+<script src="js/angular/controllers/cart.controller.js"></script>
+</body>
+</html>

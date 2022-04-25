@@ -1,0 +1,28 @@
+{
+    "name": "payboxmoney/core",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Sergey Astapenko",
+            "email": "sa@paybox.money"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Paybox\\Core\\": "src/",
+            "Paybox\\Core\\Abstractions\\": "src/abstractions/",
+            "Paybox\\Core\\Exceptions\\": "src/exceptions/",
+            "Paybox\\Core\\Interfaces\\": "src/interfaces/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0"
+    },
+    "config": {
+        "platform": {
+            "php": "7.0"
+        }
+    }
+}

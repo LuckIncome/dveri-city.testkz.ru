@@ -1,0 +1,41 @@
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url(https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/fonts/ProximaNova-Regular.woff);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ProximaNova-Semibold;
+    src: url(https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/fonts/ProximaNova-Semibold.woff);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ProximaNova-Bold;
+    src: url(https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/fonts/ProximaNova-Bold.woff);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ProximaNova-Black;
+    src: url(https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/fonts/ProximaNova-Black.woff);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ProximaNova-Light;
+    src: url(https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/fonts/ProximaNova-Light.woff);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Brygada-Regular;
+    src: url(../fonts/15218.otf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Brygada-Bold;
+    src: url(../fonts/15220.otf);
+    font-display: swap;
+}
